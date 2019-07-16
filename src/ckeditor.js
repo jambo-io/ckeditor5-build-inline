@@ -27,8 +27,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
-export default class InlineEditor extends InlineEditorBase {}
+export default class InlineEditor extends InlineEditorBase { }
 
 // Plugins to include in the build.
 InlineEditor.builtinPlugins = [
@@ -52,7 +53,8 @@ InlineEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Mention
 ];
 
 // Editor configuration.
@@ -71,7 +73,8 @@ InlineEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'mention'
 		]
 	},
 	image: {
